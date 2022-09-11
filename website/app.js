@@ -87,7 +87,7 @@ const showData=async ()=>{
     try{
         const reqData=await req.json();
         console.log(reqData);
-        document.getElementById("temp").innerHTML=`${reqData.temp} c`;
+        document.getElementById("temp").innerHTML=reqData.temp + '&degC';
         document.getElementById("Weather").innerHTML=reqData.weather;
         document.getElementById("content").innerHTML=reqData.feeling;
         document.getElementById("name").innerHTML=reqData.name;

@@ -112,7 +112,7 @@ font-size: 20px;
     justify-content: center;
     gap: 20px;
 }
-/* for tablets */
+/* make it responsive */
 @media (max-width:500px) {
     input{
         width: 300px;

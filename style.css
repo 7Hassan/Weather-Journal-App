@@ -1,10 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     background-image: url("img/sky.jpg");
     background-repeat: no-repeat;
@@ -12,34 +12,52 @@ body{
     height: 100vh;
     overflow: hidden;
 }
-header{
+
+header {
     width: 100%;
+    background-color: #0a113a;
 }
-header h1{
+
+header h1 {
     padding: 10px 0;
     text-align: center;
-    background-color: #0a113a;
     color: white;
     font-size: 30px;
     font-weight: 100;
 }
-.container{
+
+.container {
     height: calc(100vh - 54px);
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
 }
-.form{
+
+.form {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
     margin-top: 60px;
     margin-bottom: 50px;
-    
+
 }
-input,.input{
-    display:block;
+
+#error {
+    position: fixed;
+    top: 154px;
+    color: white;
+    line-height: 20px;
+    background-color: red;
+    height: 0px;
+    width: 150px;
+    text-align: center;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+input {
+    display: block;
     width: 500px;
     height: 40px;
     font-size: 20px;
@@ -52,19 +70,23 @@ input,.input{
     font-size: 18px;
     resize: none;
     line-height: 40px;
-    
+
 }
-input:focus,.input:focus{
+
+input:focus {
     background-color: white;
     color: black;
     outline: none;
- 
+
 }
-input::placeholder,.input::placeholder{
+
+input::placeholder {
     opacity: .5;
     color: white;
 }
-button{
+
+button {
+    position: relative;
     width: 200px;
     background: #0a113a;
     height: 50px;
@@ -76,48 +98,64 @@ button{
     box-shadow: 2px 4px 5px #444;
 }
 
-.entry{
+.entry {
     width: 500px;
     margin: auto;
     background: rgba(59, 74, 107, .4);
     color: black;
     text-align: center;
     font-size: 18px;
-    border-radius: 10px; 
+    border-radius: 10px;
     padding: 10px 0 15px;
-
+    opacity: 0;
+    transition: .7s;
 }
-.entry h3{
+
+.entry h3 {
     font-size: 18px;
     font-weight: 100;
-    margin-bottom :15px; 
+    margin-bottom: 15px;
 }
 
-#entryHolder{
+#entryHolder {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 60% 20% 20%;
     color: white;
 }
-#temp,#name{
-font-size: 35px;
-margin-bottom: 10px;
+
+#temp,
+#name {
+    font-size: 35px;
+    margin-bottom: 10px;
 }
-#Weather,#content,#date{
-font-size: 20px;
+
+#Weather,
+#content,
+#date {
+    font-size: 20px;
 }
-.Weather-content{
+
+#name,
+#date,
+#Weather {
+    color: black;
+}
+
+.Weather-content {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 20px;
+    gap: 12px;
 }
+
 /* make it responsive */
 @media (max-width:500px) {
-    input{
+    input {
         width: 300px;
     }
-    .entry{
-        width: 300px;
+
+    .entry {
+        width: 350px;
     }
 }
